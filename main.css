@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*the background*/
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.5),#23211c),url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/*text style for the text in the middle of the home page*/
+.banner-text{
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.banner-text h1{
+    font-size: 60px;
+}
+
+.banner-text h2{
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.banner-text p{
+    font-size: 20px;
+    line-height: 150%;
+    margin: 50px 50px;
+}
+
+/*.banner-btn is for the home page box links*/
+.banner-btn{
+    margin: 10px auto 40px;
+}
+
+/*.banner-btn a is for the box links*/
+.banner-btn a{
+    width: 15%;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: 1px solid #fff;
+    /*position: relative is what makes sure the span component below stays within the bounds of the button*/
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+/*.span is what adds the hover effects for those three links on the home page*/
+.banner-btn a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+/*this is what adds the hover effect to the span (that transition thing)*/
+.banner-btn a:hover span{
+    width: 100%;
+}
+
+/*this is what adds the hover effect for span*/
+.banner-btn a:hover{
+    color:black;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+/*This adds the navbar as seen on the home, info, and course pages*/
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 40px;
+    position: relative;
+    font-size: 25px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li:after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover:after{
+    width: 100%;
+}
+
+/*Fuck you everything goes in the same stylesheet*/
+/*Everything below this is for the quizes for the courses*/
+#quiz {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #656565;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(198, 222, 60, 0.2);
+}
+
+#question {
+  margin-bottom: 20px;
+}
+
+#options {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 20px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 5px;
+  background-color: rgb(160, 160, 80);
+  color: #131313;
+  border: 0.5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8f8d8d;
+}
